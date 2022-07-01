@@ -1,5 +1,6 @@
 package com.huawei.bytecode.type;
 
+import java.nio.ByteBuffer;
 import java.util.Arrays;
 
 /**
@@ -14,7 +15,12 @@ public class U2 {
         value[1] = b2;
     }
 
-    public Integer toInt() {
+    public U2(ByteBuffer codeBuf) {
+        value[0] = codeBuf.get();
+        value[1] = codeBuf.get();
+    }
+
+    public int toInt() {
         return ((value[0] & 0xFF) << 8) | (value[1] & 0xFF);
     }
 

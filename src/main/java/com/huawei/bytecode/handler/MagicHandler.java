@@ -20,7 +20,7 @@ public class MagicHandler implements BaseByteCodeHandler{
 
     @Override
     public void read(ByteBuffer codeBuf, ClassFile classFile) throws Exception {
-        U4 magic = new U4(codeBuf.get(), codeBuf.get(), codeBuf.get(), codeBuf.get());
+        U4 magic = new U4(codeBuf);
         if (!MAGIC_NUMBER.equals(magic.toHexString())) {
             throw new Exception("The file is not a class file.");
         }

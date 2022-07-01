@@ -1,12 +1,12 @@
 package com.huawei.bytecode.type;
 
-import java.util.Objects;
+import java.nio.ByteBuffer;
 
 /**
  * @author yunaipeng
  * @date 2022-06-30 00:10
  */
-public class U1 {
+public class U1{
 
     private final byte value;
 
@@ -14,7 +14,11 @@ public class U1 {
         this.value = value;
     }
 
-    public Integer toInt() {
+    public U1(ByteBuffer codeBuf) {
+        this.value = codeBuf.get();
+    }
+
+    public int toInt() {
         return value & 0xFF;
     }
 
@@ -43,7 +47,7 @@ public class U1 {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         U1 u1 = (U1) o;
-        return toInt().equals(u1.toInt());
+        return toInt() == u1.toInt();
     }
 
     @Override

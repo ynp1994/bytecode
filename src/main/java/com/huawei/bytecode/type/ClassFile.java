@@ -162,7 +162,7 @@ public class ClassFile {
                 ", minorVersion=" + minorVersion +
                 ", majorVersion=" + majorVersion +
                 ", constantPoolCount=" + constantPoolCount +
-                ", constantPool=" + Arrays.toString(constantPool) +
+                ", constantPool=" + constantPoolToString() +
                 ", accessFlags=" + accessFlags +
                 ", thisClass=" + thisClass +
                 ", superClass=" + superClass +
@@ -175,5 +175,15 @@ public class ClassFile {
                 ", attributesCount=" + attributesCount +
                 ", attributes=" + Arrays.toString(attributes) +
                 '}';
+    }
+
+    private String constantPoolToString() {
+        StringBuilder buffer = new StringBuilder();
+        buffer.append("[ ");
+        for (int i = 1; i < constantPool.length; i++) {
+            buffer.append("{").append("index: ").append(i).append(", ").append(constantPool[i].toString()).append("}, ");
+        }
+        buffer.append("]");
+        return buffer.toString();
     }
 }

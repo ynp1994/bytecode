@@ -19,7 +19,7 @@ public class AccessFlagsHandler implements BaseByteCodeHandler{
 
     @Override
     public void read(ByteBuffer codeBuf, ClassFile classFile) throws Exception {
-        U2 accessFlags = new U2(codeBuf.get(), codeBuf.get());
+        U2 accessFlags = new U2(codeBuf);
         classFile.setAccessFlags(accessFlags);
     }
 }

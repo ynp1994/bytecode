@@ -21,6 +21,10 @@ public class ClassFileAnalyzer {
         handlers.add(new ConstantPoolHandler());
         handlers.add(new AccessFlagsHandler());
         handlers.add(new ThisAndSuperClassHandler());
+        handlers.add(new InterfacesHandler());
+        handlers.add(new FieldHandler());
+        handlers.add(new MethodHandler());
+        handlers.add(new AttributeHandler());
         handlers.sort(Comparator.comparingInt(BaseByteCodeHandler::order));
     }
 

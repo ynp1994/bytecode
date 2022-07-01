@@ -28,4 +28,11 @@ public class ConstantClassInfo extends CpInfo{
     public U2 getNameIndex() {
         return nameIndex;
     }
+
+    @Override
+    public String toString() {
+        return "ConstantClassInfo{" +
+                "nameIndex=" + nameIndex +
+                '}';
+    }
 }

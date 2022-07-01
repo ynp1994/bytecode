@@ -30,10 +30,10 @@ public class ConstantUtf8Info extends CpInfo {
 
     @Override
     public String toString() {
-        return super.toString()
+        return "{ "+super.toString()
                 + ", length = "
                 + length.toInt()
                 + ", str = "
-                + new String(bytes, StandardCharsets.UTF_8);
+                + new String(bytes, StandardCharsets.UTF_8) +" }";
     }
 }

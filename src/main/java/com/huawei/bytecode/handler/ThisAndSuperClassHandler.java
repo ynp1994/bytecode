@@ -17,8 +17,8 @@ public class ThisAndSuperClassHandler implements BaseByteCodeHandler{
 
     @Override
     public void read(ByteBuffer codeBuf, ClassFile classFile) throws Exception {
-        U2 thisClass = new U2(codeBuf.get(), codeBuf.get());
-        U2 superClass = new U2(codeBuf.get(), codeBuf.get());
+        U2 thisClass = new U2(codeBuf);
+        U2 superClass = new U2(codeBuf);
         classFile.setThisClass(thisClass);
         classFile.setSuperClass(superClass);
     }

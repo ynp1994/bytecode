@@ -5,11 +5,10 @@ import com.huawei.bytecode.type.ClassFile;
 import com.huawei.bytecode.type.constantpool.ConstantClassInfo;
 import com.huawei.bytecode.type.constantpool.CpInfo;
 import com.huawei.bytecode.util.ClassAccessFlagUtils;
+import org.junit.Assert;
 import org.junit.Test;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 import java.nio.file.Files;
@@ -34,6 +33,7 @@ public class ClassFileAnalyzerTest {
         System.out.println("superClass = " + constantPool[superClass.getNameIndex().toInt()]);
         System.out.println("flag = " + flag);
         System.out.println("classFile = " + classFile);
+        Assert.assertFalse(codeBuf.hasRemaining());
     }
 
     public static ByteBuffer readFile(String classFilePath) throws Exception {
