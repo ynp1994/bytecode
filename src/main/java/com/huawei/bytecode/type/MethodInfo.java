@@ -1,5 +1,7 @@
 package com.huawei.bytecode.type;
 
+import com.huawei.bytecode.type.attribute.AttributeInfo;
+
 import java.nio.ByteBuffer;
 import java.util.Arrays;
 

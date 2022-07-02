@@ -1,5 +1,6 @@
 package com.huawei.bytecode.type;
 
+import com.huawei.bytecode.type.attribute.AttributeInfo;
 import com.huawei.bytecode.type.constantpool.CpInfo;
 
 import java.util.Arrays;

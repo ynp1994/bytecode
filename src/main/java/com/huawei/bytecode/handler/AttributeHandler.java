@@ -1,6 +1,6 @@
 package com.huawei.bytecode.handler;
 
-import com.huawei.bytecode.type.AttributeInfo;
+import com.huawei.bytecode.type.attribute.AttributeInfo;
 import com.huawei.bytecode.type.ClassFile;
 import com.huawei.bytecode.type.U2;
 
